@@ -1,0 +1,123 @@
+% -*-LaTex-*-
+%front matter of pcasm book
+
+\chapter{Pref\'acio}
+
+\section*{Prop\'osito}
+
+O prop\'osito desse livro \'e oferecer ao leitor uma melhor compreens\~ao
+de como computadores realmente funcionam em n\'iveis mais baixos que o de 
+linguagens como o Pascal. A produtividade durante o desenvolvimento de
+softwares em linguagens de alto n\'ivel, como C e C++, pode ser muito maior
+quando se obt\'em um conhecimento aprofudado no processo de funcionamento de um
+computador. Aprender a programar em linguagem de montagem \'e uma excelente forma
+de atingir esse objetivo. Outros livros de linguagem de montagem para 
+computadores podem ainda ensinar como programar processadores 8086, o mesmo
+do primeiro computador utilizado em 1981! O processador 8086 suporta apenas o modo
+\emph{real}. Nesse modo, qualquer programa pode endere\c{c}ar qualquer mem\'oria ou
+dispositivo do computador. Esse modo n\~ao \'e adequado para sistemas operacionais
+seguros e multitarefas. Esse livro discute, como alternativa, a programar 
+processadores 80386 e posteriores em modo \emph{protegido} (o modo em que o 
+Windows e o Linux s\~ao executados). Esse modo suporta os recursos que sistemas 
+operacionais esperam, como mem\'oria virtual e prote\c{c}\~ao de mem\'oria.
+H\'a diversas raz\~oes que justificam a utiliza\c{c}\~ao do modo protegido:
+
+\begin{enumerate}
+\item Programar em modo protegido \'e mais f\'acil do que no modo real 8086
+	  que outros livros usam.
+\item Todos os sistemas operacionis modernos s\~ao executados em modo protegido.
+\item H\'a softwares livres dispon\'iveis que s\~ao executados nesse modo.
+\end{enumerate}
+A falta de livros para programa\c{c}\~ao assembly em modo protegido \'e a principal
+raz\~ao pela qual o autor escreveu esse livro.
+
+Conforme mencionado acima, esse livro faz uso de softwares de
+c\'odigo livre/aberto: o montador NASM, e o compilador
+C/C++ DJGPP. Ambos est\~ao dispon\'iveis para download na internet. O livro
+tamb\'em discute como compilar o c\'odigo de montagem NASM no Linux e com os
+compiladores C/C++ da Microsoft e da Borland no Windows. Exemplos para todas
+essas plataformas podem ser encontrados em meu web site:
+{\code http://pacman128.github.io/pcasm/}.
+\'E \emph{necess\'ario} fazer download dos c\'odigos de exemplos para montar e
+executar muitos dos exemplos desse tutorial.
+
+Tenha em mente que esse livro n\~ao tenta cobrir cada aspecto de programa\c{c}\~ao
+assembly. O autor tentou abordar t\'opicos importantes que \emph{todo} programador
+deveria estar familiarizado.
+
+\section*{Agradecimentos}
+
+O autor gostaria de agradecer a muitos programadores ao redor do mundo
+que contribuiram com o movimento do c\'odigo livre/aberto. Todos os programas
+e at\'e mesmo esse livro foram produzidos utilizando software livre. Especificamente,
+o autor gostaria de agradecer a John~S.~Fine, Simon~Tatham, Julian~Hall e outros por
+desenvolverem o montador NASM no qual todos os exemplos desse livro foram baseados;
+DJ Delorie por desenvolver o compilador C/C++ DJGPP; \`a uma numerosa quantidade de
+pessoas que contribuiram para o compilador GNU gcc em qual o DJGPP \'e baseado; 
+Donald Knuth e outros por desenvolverem os sistemas de tipagem \TeX\ e \LaTeXe\ que
+foram usados para produzir esse livro; Richard Stallman (fundador da Funda\c{c}\~ao de
+Software Livre), Linus Torvalds (criador do kernel Linux) e outros
+que produziram softwares fundamentais usados na produ\c{c}\~ao desse trabalho.
+
+Agradeço \'as seguintes pessoas pelas corre\c{c}\~oes:
+\begin{itemize}
+\item John S. Fine
+\item Marcelo Henrique Pinto de Almeida
+\item Sam Hopkins
+\item Nick D'Imperio
+\item Jeremiah Lawrence
+\item Ed Beroset
+\item Jerry Gembarowski
+\item Ziqiang Peng
+\item Eno Compton
+\item Josh I Cates
+\item Mik Mifflin
+\item Luke Wallis
+\item Gaku Ueda
+\item Brian Heward
+\item Chad Gorshing
+\item F. Gotti
+\item Bob Wilkinson
+\item Markus Koegel
+\item Louis Taber
+\item Dave Kiddell
+\item Eduardo Horowitz
+\item S\'{e}bastien Le Ray
+\item Nehal Mistry
+\item Jianyue Wang
+\item Jeremias Kleer
+\item Marc Janicki
+\item Trevor Hansen
+\item Giacomo Bruschi
+\item Leonardo Rodr\'{i}guez M\'{u}jica
+\item Ulrich Bicheler
+\item Wu Xing
+\item Oleksandr Baranyuk
+\end{itemize}
+
+\section*{Recursos na Internet (em ingl\^es)}
+\begin{center}
+\begin{tabular}{|ll|}
+\hline
+Página do autor & {\code http://www.drpaulcarter.com/} \\
+NASM SourceForge & {\code http://sourceforge.net/projects/nasm/} \\
+DJGPP & {\code http://www.delorie.com/djgpp} \\
+Linux Assembly & {\code http://www.linuxassembly.org/} \\
+The Art of Assembly & {\code http://webster.cs.ucr.edu/} \\
+USENET & {\code comp.lang.asm.x86} \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\section*{Feedback}
+
+O autor agradece qualquer feedback desse livro.
+\begin{center}
+\begin{tabular}{ll}
+\textbf{E-mail:} & {\code pacman128@gmail.com} \\
+\textbf{WWW:}    & {\code http://pacman128.github.io/pcasm/} \\
+\end{tabular}
+\end{center}
+
+

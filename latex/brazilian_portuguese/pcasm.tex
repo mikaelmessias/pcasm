@@ -1,0 +1,109 @@
+% To create PDF version, type
+%   pdflatex pcasm.tex
+% This will produce errors the first time, type R at the error prompt
+% Then rerun again (twice to get all the references.
+
+\documentclass[11pt]{book}
+\typeout{-----------------------------------------}
+\typeout{Enter files to be included. (*=all)}
+\typeout{(pcasm1,pcasm2,...)}
+\typeout{-----------------------------------------}
+\typein[\infiles]{ }
+\if*\infiles\else\includeonly{\infiles}\fi
+
+
+\newif\ifmypdf
+\ifx\pdfoutput\undefined
+    \pdffalse          % we are not running PDFLaTeX
+\else
+%    \pdfoutput=1       % we are running PDFLaTeX
+%    \pdftrue
+\fi
+%----------------------------------------------------------------------
+% The following is the construct that interests us in the end:
+%\ifpdf
+%   % Put PDF-specific stuff here
+%\else
+%   % Put LaTeX-specific stuff here
+%\fi
+
+\usepackage{indentfirst}  % indent first paragraph of sections
+%\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{epsfig}
+\usepackage{longtable}
+\usepackage{color}
+\usepackage{makeidx}
+\usepackage[brazilian]{babel}
+\ifmypdf
+\usepackage[pdftex,
+            bookmarks=true,
+            bookmarksnumbered=true,
+            pdftitle={PC Assembly Language},
+            pdfauthor={Paul A. Carter},
+            pdfsubject={Linguagem de Programação Assembly 80x86},
+	    pdfkeywords={programação assembly 80x86}]{hyperref}
+\fi
+\author{Paul~A.~Carter}
+\title{Linguagem Assembly de PCs}
+\usepackage{lecnote}
+\makeindex
+
+
+\hyphenation{num-bers SF OF CF DF fact dif-fer-ence inter-rupts op-er-ands}
+\begin{document}
+\maketitle
+\newlength{\AsmMargin}
+\setlength{\AsmMargin}{-1cm}
+\DefineVerbatimEnvironment{AsmCodeListing}{Verbatim}
+{numbers=left, frame=lines,xleftmargin=\AsmMargin, labelposition=all, commentchar=^ }
+
+\newcommand{\MarginNote}[1]{\marginpar{\sloppy \em \small #1}}
+\thispagestyle{empty}
+\vspace*{\fill}
+\noindent Copyright \copyright\  2001, 2002, 2003, 2004 by Paul Carter
+
+\noindent \emph{Traduzido para portugu\^es por Mikael Pereira Messias}\\
+
+\noindent Este documento pode ser completamente reproduzido e distribu\'ido
+(incluindo essa autoria, direitos autorais e aviso de permiss\~ao), desde que
+n\~ao seja cobrada qualquer taxa pelo documento em si sem o consentimento do
+autor. Isso inclui resumos, como avalia\c{c}\~oes e publicidade, e trabalhos derivados
+como tradu\c{c}\~oes. \\
+
+\noindent \noindent Note que essa restri\c{c}\~ao n\~ao tem inten\c{c}\~ao de proibir taxas para 
+servi\c{c}os de impress\~ao e c\'opia do documento.\\
+
+\noindent Docentes s\~ao encorajados a utilizar esse documento como recurso em suas
+aulas; contudo, o autor gostaria de ser notificado nesses casos.\\
+
+\index{subroutine|see{subprogram}}
+\index{REPNZ|see{REPNE}}
+\index{REPZ|see{REPE}}
+\index{C++!member functions|see{methods}}
+\index{text segment|see{code segment}}
+
+\vfill
+\frontmatter
+\include{toc}
+\include{pcasmf}
+\mainmatter
+\include{pcasm1}
+\include{pcasm2}
+\include{pcasm3}
+\include{pcasm4}
+\include{pcasm5}
+\include{pcasm6}
+\include{pcasm7}
+% \include{pcasm8}
+\begin{appendix}
+\include{pcasma}
+\end{appendix}
+\clearpage
+\ifmypdf
+\phantomsection % fixes link anchor
+\fi
+\addcontentsline{toc}{chapter}{Index}
+\printindex
+\end{document}
+
