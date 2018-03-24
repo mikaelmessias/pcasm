@@ -1,65 +1,65 @@
 % -*-LaTex-*-
 %front matter of pcasm book
 
-\chapter{Pref\'acio}
+\chapter{Prefácio}
 
-\section*{Prop\'osito}
+\section*{Propósito}
 
-O prop\'osito desse livro \'e oferecer ao leitor uma melhor compreens\~ao
-de como computadores realmente funcionam em n\'iveis mais baixos que o de 
+O propósito desse livro é oferecer ao leitor uma melhor compreensão
+de como computadores realmente funcionam em níveis mais baixos que o de 
 linguagens como o Pascal. A produtividade durante o desenvolvimento de
-softwares em linguagens de alto n\'ivel, como C e C++, pode ser muito maior
-quando se obt\'em um conhecimento aprofudado no processo de funcionamento de um
-computador. Aprender a programar em linguagem de montagem \'e uma excelente forma
+softwares em linguagens de alto nível, como C e C++, pode ser muito maior
+quando se obtém um conhecimento aprofudado no processo de funcionamento de um
+computador. Aprender a programar em linguagem de montagem é uma excelente forma
 de atingir esse objetivo. Outros livros de linguagem de montagem para 
 computadores podem ainda ensinar como programar processadores 8086, o mesmo
 do primeiro computador utilizado em 1981! O processador 8086 suporta apenas o modo
-\emph{real}. Nesse modo, qualquer programa pode endere\c{c}ar qualquer mem\'oria ou
-dispositivo do computador. Esse modo n\~ao \'e adequado para sistemas operacionais
+\emph{real}. Nesse modo, qualquer programa pode endereçar qualquer memória ou
+dispositivo do computador. Esse modo não é adequado para sistemas operacionais
 seguros e multitarefas. Esse livro discute, como alternativa, a programar 
 processadores 80386 e posteriores em modo \emph{protegido} (o modo em que o 
-Windows e o Linux s\~ao executados). Esse modo suporta os recursos que sistemas 
-operacionais esperam, como mem\'oria virtual e prote\c{c}\~ao de mem\'oria.
-H\'a diversas raz\~oes que justificam a utiliza\c{c}\~ao do modo protegido:
+Windows e o Linux são executados). Esse modo suporta os recursos que sistemas 
+operacionais esperam, como memória virtual e proteção de memória.
+Há diversas razões que justificam a utilização do modo protegido:
 
 \begin{enumerate}
-\item Programar em modo protegido \'e mais f\'acil do que no modo real 8086
+\item Programar em modo protegido é mais fácil do que no modo real 8086
 	  que outros livros usam.
-\item Todos os sistemas operacionis modernos s\~ao executados em modo protegido.
-\item H\'a softwares livres dispon\'iveis que s\~ao executados nesse modo.
+\item Todos os sistemas operacionis modernos são executados em modo protegido.
+\item Há softwares livres disponíveis que são executados nesse modo.
 \end{enumerate}
-A falta de livros para programa\c{c}\~ao assembly em modo protegido \'e a principal
-raz\~ao pela qual o autor escreveu esse livro.
+A falta de livros para programação assembly em modo protegido é a principal
+razão pela qual o autor escreveu esse livro.
 
 Conforme mencionado acima, esse livro faz uso de softwares de
-c\'odigo livre/aberto: o montador NASM, e o compilador
-C/C++ DJGPP. Ambos est\~ao dispon\'iveis para download na internet. O livro
-tamb\'em discute como compilar o c\'odigo de montagem NASM no Linux e com os
+código livre/aberto: o montador NASM, e o compilador
+C/C++ DJGPP. Ambos estão disponíveis para download na internet. O livro
+também discute como compilar o código de montagem NASM no Linux e com os
 compiladores C/C++ da Microsoft e da Borland no Windows. Exemplos para todas
 essas plataformas podem ser encontrados em meu web site:
 {\code http://pacman128.github.io/pcasm/}.
-\'E \emph{necess\'ario} fazer download dos c\'odigos de exemplos para montar e
+é \emph{necessário} fazer download dos códigos de exemplos para montar e
 executar muitos dos exemplos desse tutorial.
 
-Tenha em mente que esse livro n\~ao tenta cobrir cada aspecto de programa\c{c}\~ao
-assembly. O autor tentou abordar t\'opicos importantes que \emph{todo} programador
+Tenha em mente que esse livro não tenta cobrir cada aspecto de programação
+assembly. O autor tentou abordar tópicos importantes que \emph{todo} programador
 deveria estar familiarizado.
 
 \section*{Agradecimentos}
 
 O autor gostaria de agradecer a muitos programadores ao redor do mundo
-que contribuiram com o movimento do c\'odigo livre/aberto. Todos os programas
-e at\'e mesmo esse livro foram produzidos utilizando software livre. Especificamente,
+que contribuiram com o movimento do código livre/aberto. Todos os programas
+e até mesmo esse livro foram produzidos utilizando software livre. Especificamente,
 o autor gostaria de agradecer a John~S.~Fine, Simon~Tatham, Julian~Hall e outros por
 desenvolverem o montador NASM no qual todos os exemplos desse livro foram baseados;
-DJ Delorie por desenvolver o compilador C/C++ DJGPP; \`a uma numerosa quantidade de
-pessoas que contribuiram para o compilador GNU gcc em qual o DJGPP \'e baseado; 
+DJ Delorie por desenvolver o compilador C/C++ DJGPP; à uma numerosa quantidade de
+pessoas que contribuiram para o compilador GNU gcc em qual o DJGPP é baseado; 
 Donald Knuth e outros por desenvolverem os sistemas de tipagem \TeX\ e \LaTeXe\ que
-foram usados para produzir esse livro; Richard Stallman (fundador da Funda\c{c}\~ao de
+foram usados para produzir esse livro; Richard Stallman (fundador da Fundação de
 Software Livre), Linus Torvalds (criador do kernel Linux) e outros
-que produziram softwares fundamentais usados na produ\c{c}\~ao desse trabalho.
+que produziram softwares fundamentais usados na produção desse trabalho.
 
-Agradeço \'as seguintes pessoas pelas corre\c{c}\~oes:
+Agradeço às seguintes pessoas pelas correções:
 \begin{itemize}
 \item John S. Fine
 \item Marcelo Henrique Pinto de Almeida
