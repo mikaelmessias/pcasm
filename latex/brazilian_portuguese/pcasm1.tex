@@ -632,24 +632,27 @@ algumas diferenças na sintaxe do assembly para o MASM/TASM e o NASM.
 
 \subsection{Operadores de instrução}
 
-Machine code instructions have varying number and type of operands; however,
-in general, each instruction itself will have a fixed number of operands (0
-to 3). Operands can have the following types:
+Instruções de código de máquina variam em número e tipo de operandos; entretanto,
+em geral, cada instrução terá um fixo número de operandos (0 a 3). Operandos
+podem ter os seguintes tipos:
+
 \begin{description}
 \item[register:]
-These operands refer directly to the contents of the CPU's registers.
+  Esses operandos se referem diretamente ao conteúdo dos registradores da CPU.
 \item[memory:]
-These refer to data in memory. The address of the data may be a constant
-hardcoded into the instruction or may be computed using values of registers.
-Address are always offsets from the beginning of a segment.
+  Esses se referem aos dados em memória. O endereço dos dados podem ser
+  constantes programadas diretamente no código da instrução ou computadas
+  usando valores dos registradores.
+  Endereços são sempre deslocamentos do início de um segmento.
 \item[immediate:]
-\index{immediate}
-These are fixed values that are listed in the instruction itself. They are
-stored in the instruction itself (in the code segment), not in the data
-segment.
-\item[implied:]
-These operands are not explicitly shown. For example, the increment
-instruction adds one to a register or memory. The one is implied.
+  \index{immediate}
+  Esses são valores fixos que são listados na própria instrução. Eles são
+  armazenados na própria instrução (no segmento de código), não no segmento
+  de dados.
+\item[implied]
+  Esses operandos não são explicitamente mostrados. Por exemplo, a instrução
+  de incremento adiciona um ao reistrador ou à memória. O valor de incremento
+  é implicado.
 \end{description}
 \index{assembly language|)}
 
