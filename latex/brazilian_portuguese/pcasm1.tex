@@ -602,7 +602,6 @@ para a instrução deadição. A forma geral de uma instrução em assembly é:
   {\em mnemônico operando(s)}
 \end{CodeQuote}
 
-
 Um \emph{montador} \index{montador} é um programa que lê um arquivo de texto
 com instruções assembly e converte a código de máquina. \emph{Compiladores}
 \index{compiladores} são programas que fazem conversão similar de linguagens
@@ -619,16 +618,17 @@ assembly language statement directly represents a single machine
 instruction. High-level language statements are \emph{much} more
 complex and may require many machine instructions.
 
-Another important difference between assembly and high-level languages is that
-since every different type of CPU has its own machine language, it also has
-its own assembly language. Porting assembly programs between different computer
-architectures is \emph{much} more difficult than in a high-level language.
+Outra importante diferença entre assembly e linguagens de alto nível é que
+cada tipo diferente de CPU tem sua própria linguagem de máquina, e também
+tem sua própria linguagem de montagem (assembly). Portar programas assembly
+entre diferentes arquiteturas de computadores é \emph{muito} mais difícil que
+uma linguagem de alto nível.
 
-This book's examples uses the Netwide Assembler or NASM \index{NASM}
-for short. It is freely available off the Internet (see the preface
-for the URL). More common assemblers are Microsoft's Assembler (MASM)
-\index{MASM} or Borland's Assembler (TASM). \index{TASM} There are
-some differences in the assembly syntax for MASM/TASM and NASM.
+Os exemplos desse livro utilizam o /Netwide Assembler/ ou, abreviando: NASM
+\index{NASM}. É um programa livre, disponibilizado na Internet (veja o prefácio
+para a encontrar a URL). Os outros montadores mais comuns são o montador da
+Microsoft (MASM) \index{MASM} ou o montador da Borland (TASM). \index{TASM} Há
+algumas diferenças na sintaxe do assembly para o MASM/TASM e o NASM.
 
 \subsection{Operadores de instrução}
 
