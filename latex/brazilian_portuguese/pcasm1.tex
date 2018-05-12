@@ -1,6 +1,6 @@
 % -*-latex-*-
 \chapter{Introdu\c{c}\~ao}
-\section{Sistemas Num\'ericos}
+\section{Sistemas Numéricos}
 
 Memory in a computer consists of numbers. Computer memory does not
 store these numbers in decimal (base 10). Because it greatly
@@ -16,7 +16,7 @@ in the number. For example:
 234 = 2 \times 10^2 + 3 \times 10^1 + 4 \times 10^0
 \end{displaymath}
 
-\subsection{Bin\'ario\index{bin\'ario|(}}
+\subsection{Binário\index{binário|(}}
 
 Base 2 numbers are composed of 2 possible digits (0 and 1). Each digit
 of a number has a power of 2 associated with it based on its position
@@ -24,10 +24,10 @@ in the number. (A single binary digit is called a bit.) For
 example\footnote{The 2 subscript is used to show that the number is
 represented in binary, not decimal}:
 \begin{eqnarray*}
-11001_2 & = & 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 
+11001_2 & = & 1 \times 2^4 + 1 \times 2^3 + 0 \times 2^2 + 0 \times 2^1
               + 1 \times 2^0 \\
  & = & 16 + 8 + 1 \\
- & = & 25 
+ & = & 25
 \end{eqnarray*}
 
 This shows how binary may be converted to decimal. Table~\ref{tab:dec-bin}
@@ -93,7 +93,7 @@ $101100_2$ \\
 
 If one considers the following decimal division:
 \[ 1234 \div 10 = 123\; r\; 4 \]
-he can see that this division strips off the rightmost decimal digit of 
+he can see that this division strips off the rightmost decimal digit of
 the number and shifts the other decimal digits one position to the right.
 Dividing by two performs a similar operation, but for the binary digits
 of the number. Consider the following binary division:
@@ -101,8 +101,8 @@ of the number. Consider the following binary division:
 This fact can be used to convert a decimal
 number to its equivalent binary representation as
 Figure~\ref{fig:dec-convert} shows. This method finds the rightmost
-digit first, this digit is called the \emph{least significant bit} (lsb). 
-The leftmost digit is called the \emph{most significant bit} (msb). 
+digit first, this digit is called the \emph{least significant bit} (lsb).
+The leftmost digit is called the \emph{most significant bit} (msb).
 The basic unit of memory consists of 8 bits and is called a \emph{byte}.
 \index{binary|)}
 
@@ -186,9 +186,9 @@ can be represented by a 2-digit hex number. A byte's value ranges from
 0 to 11111111 in binary, 0 to FF in hex and 0 to 255 in decimal.
 \index{hexadecimal|)}
 
-\section{Organiza\c{c}\~ao do Computador}
+\section{Organização do Computador}
 
-\subsection{Mem\'oria\index{mem\'oria|(}}
+\subsection{Memória\index{memória|(}}
 
 The basic unit of memory is a byte. \index{byte} \MarginNote{Memory is
 measured in units of kilobytes (~$2^{10} = 1,024$ bytes), megabytes
@@ -202,9 +202,9 @@ unique number known as its address as Figure~\ref{fig:memory} shows.
 \begin{tabular}{rcccccccc}
 Address & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 \\
 \cline{2-9}
-Memory & \multicolumn{1}{|c}{2A}  & \multicolumn{1}{|c}{45}  
-       & \multicolumn{1}{|c}{B8} & \multicolumn{1}{|c}{20} 
-       & \multicolumn{1}{|c}{8F} & \multicolumn{1}{|c}{CD} 
+Memory & \multicolumn{1}{|c}{2A}  & \multicolumn{1}{|c}{45}
+       & \multicolumn{1}{|c}{B8} & \multicolumn{1}{|c}{20}
+       & \multicolumn{1}{|c}{8F} & \multicolumn{1}{|c}{CD}
        & \multicolumn{1}{|c}{12} & \multicolumn{1}{|c|}{2E} \\
 \cline{2-9}
 \end{tabular}
@@ -230,20 +230,20 @@ the PC architecture, names have been given to these larger sections of
 memory as Table~\ref{tab:mem_units} shows.
 
 All data in memory is numeric. Characters are stored by using a
-\emph{character code} that maps numbers to characters. One of the 
+\emph{character code} that maps numbers to characters. One of the
 most common character codes is known as \emph{ASCII} (American
 Standard Code for Information Interchange). A new, more complete code
 that is supplanting ASCII is Unicode. One key difference between the
 two codes is that ASCII uses one byte to encode a character, but
 Unicode uses multiple bytes. There are several different forms of Unicode.
-On x86 C/C++ compilers, Unicode is represented in code using the 
-{\code wchar\_t} type and the UTF-16 encoding which uses 16 bits (or a 
-\emph{word}) per character. For example, ASCII maps the byte $41_{16}$ 
-($65_{10}$) to the character capital \emph{A}; UTF-16 maps it to the 
-word $0041_{16}$. Since ASCII uses a byte, it is limited to only 256 
-different characters\footnote{In fact, ASCII only uses the lower 7-bits 
-and so only has 128 different values to use.}. Unicode extends the ASCII 
-values and allows many more characters to be represented. This is important 
+On x86 C/C++ compilers, Unicode is represented in code using the
+{\code wchar\_t} type and the UTF-16 encoding which uses 16 bits (or a
+\emph{word}) per character. For example, ASCII maps the byte $41_{16}$
+($65_{10}$) to the character capital \emph{A}; UTF-16 maps it to the
+word $0041_{16}$. Since ASCII uses a byte, it is limited to only 256
+different characters\footnote{In fact, ASCII only uses the lower 7-bits
+and so only has 128 different values to use.}. Unicode extends the ASCII
+values and allows many more characters to be represented. This is important
 for representing characters for all the languages of the world.
 \index{memory|)}
 
@@ -290,7 +290,7 @@ CPU generation and model. The number of cycles depends on the
 instructions before it and other factors as well.
 
 
-\subsection{A fam\'ilia de CPUs 80x86\index{CPU!80x86}}
+\subsection{A família de CPUs 80x86\index{CPU!80x86}}
 
 IBM-type PC's contain a CPU from Intel's 80x86 family (or a clone of one).
 The CPU's in this family all have some common features including a base
@@ -367,8 +367,8 @@ same purposes as the general registers. However, they can not be
 decomposed into 8-bit registers.
 
 The 16-bit BP and SP registers are used to point to data in the
-machine language stack and are called the Base Pointer\index{register!base pointer} 
-and Stack Pointer\index{register!stack pointer}, respectively. These will be discussed later. 
+machine language stack and are called the Base Pointer\index{register!base pointer}
+and Stack Pointer\index{register!stack pointer}, respectively. These will be discussed later.
 
 The 16-bit CS, DS, SS and ES registers are \emph{segment
 registers}. \index{register!segment} They denote what memory is used
@@ -396,7 +396,7 @@ The 80386 and later processors have extended registers. For example, the
 still refers to the 16-bit register and EAX is used to refer to the extended
 32-bit register. AX is the lower 16-bits of EAX just as AL is the lower 8-bits
 of AX (and EAX). There is no way to access the upper 16-bits of EAX directly.
-The other extended registers are EBX, ECX, EDX, ESI and EDI. 
+The other extended registers are EBX, ECX, EDX, ESI and EDI.
 
 Many of the other registers are extended as well. BP becomes
 EBP\index{register!base pointer}; SP becomes ESP\index{register!stack
@@ -421,16 +421,16 @@ unchanged, even though the register size changed.
 
 \subsection{Modo Real \label{modo_real} \index{modo real|(}}
 
-In \MarginNote{So where did the infamous DOS 640K limit come from? The BIOS 
-required some of the 1M for its code and for hardware devices like the video 
-screen.} real mode, memory is limited to only one megabyte ($2^{20}$ bytes). 
+In \MarginNote{So where did the infamous DOS 640K limit come from? The BIOS
+required some of the 1M for its code and for hardware devices like the video
+screen.} real mode, memory is limited to only one megabyte ($2^{20}$ bytes).
 Valid
 address range from (in hex) 00000 to FFFFF.\@  % \@ means end of sentence
 These addresses require a 20-bit number. Obviously, a 20-bit number will not
 fit into any of the 8086's 16-bit registers. Intel solved this problem, by
 using two 16-bit values to determine an address. The first 16-bit value is called
 the \emph{selector}. Selector values must be stored in segment registers. The
-second 16-bit value is called the \emph{offset}. The physical address 
+second 16-bit value is called the \emph{offset}. The physical address
 referenced by a 32-bit \emph{selector:offset} pair is computed by the formula
 \[ 16 * {\rm selector} + {\rm offset} \]
 Multiplying by 16 in hex is easy, just add a 0 to the right of the number. For
@@ -457,7 +457,7 @@ execution moves from one segment to another, the value of CS must be
 changed. Similar problems occur with large amounts of data and the DS
 register. This can be very awkward!
 
-\item Each byte in memory does not have a unique segmented address. The 
+\item Each byte in memory does not have a unique segmented address. The
 physical address 04808 can be referenced by 047C:0048, 047D:0038, 047E:0028
 or 047B:0058.\@ This can complicate the comparison of segmented addresses.
 
@@ -530,7 +530,7 @@ In Windows 3.x, \emph{standard mode} referred to 286 16-bit protected mode and
 \emph{enhanced mode} referred to 32-bit mode. Windows 9X, Windows NT/2000/XP, OS/2
 and Linux all run in paged 32-bit protected mode.
 
-\subsection{Interrup\c{c}\~oes\index{interrup\c{c}\~oes}}
+\subsection{Interrupções\index{interrupções}}
 
 Sometimes the ordinary flow of a program must be interrupted to process events
 that require prompt response. The hardware of a computer provides a mechanism
@@ -562,43 +562,51 @@ cycles). Traps generally do not return. Often they abort the program.
 
 \section{Linguagem de Montagem}
 
-\subsection{Linguagem de m\'aquina\index{linguagem de m\'aquina}}
+\subsection{Linguagem de máquina\index{linguagem de máquina}}
 
-Every type of CPU understands its own machine language. Instructions
-in machine language are numbers stored as bytes in memory. Each
-instruction has its own unique numeric code called its \emph{operation
-code} or \emph{opcode} \index{opcode} for short. The 80x86 processor's
-instructions vary in size.  The opcode is always at the beginning of
-the instruction. Many instructions also include data ({\em e.g.\/},
-constants or addresses) used by the instruction.
+Toda CPU entende entendeu sua própria linguagem de máquina. Instruções
+de linguagem de máquina são números armazenados como um conjunto de bytes
+na memória. Cada instrução tem seu próprio e único código numérico chamado
+de \emph{código de operação} ou, para ser curto: \emph{opcode}
+\index{opcode}. As instruções do processador 80x86 variam em tamanho. O
+opcode está sempre localizado no começo de uma instrução. Muitas instruções
+também incluem dados ({\em e.g.}, constantes ou endereços) usados pela
+instrução.
 
-Machine language is very difficult to program in directly. Deciphering the
-meanings of the numerical-coded instructions is tedious for humans. For
-example, the instruction that says to add the EAX and EBX registers together
-and store the result back into EAX is encoded by the following hex codes:
+Linguagem de máquina é muito difícil para ser utilizada diretamente.
+Decifrando os significados de instruções codificadas em conjuntos de números
+é uma tarefa tediosa para humanos. Por exemplo, a instrução que diz para
+adicionar os registradores EAX e EBX juntos e armazenar o resultado em EAX
+é codificada pelos seguintes códigos hexadecimais:
 \begin{quote}
    03 C3
 \end{quote}
-This is hardly obvious. Fortunately, a program called an
-\emph{assembler} \index{assembler} can do this tedious work for the
-programmer.
+Isso não é tão fácil de entender. Felizmente, um programa chamado
+\emph{montador} ou \emph{assembler} em inglês \index{montador} pode fazer
+esse trabalho tedioso para o programador.
 
 \subsection{Linguagem de montagem\index{linguagem de montagem|(}}
 
-An assembly language program is stored as text (just as a higher level language
-program). Each assembly instruction represents exactly one machine instruction.
-For example, the addition instruction described above would be represented
-in assembly language as:
+Uma linguagem de montagem é um programa armazenado em texto (assim como um
+programa escrito em uma linguagem de alto nível). Cada instrução assembly
+representa exatamente uma instrução de máquina. Por exemplo, a instrução de
+adição descrita acima poderia ser representada em linguagem assembly como
+
 \begin{CodeQuote}
    add eax, ebx
 \end{CodeQuote}
-Here the meaning of the instruction is \emph{much} clearer than in
-machine code. The word {\code add} is a \emph{mnemonic}
-\index{mnemonic} for the addition instruction.  The general form of an
-assembly instruction is:
+Aqui o significado da instrução está \emph{muito} mais claro que em código
+de máquina. A palavra {\code add} é chamado de {mnemônico} \index{mnemônico}
+para a instrução deadição. A forma geral de uma instrução em assembly é:
 \begin{CodeQuote}
-  {\em mnemonic operand(s)}
+  {\em mnemônico operando(s)}
 \end{CodeQuote}
+
+Um \emph{montador} \index{montador} é um programa que lê um arquivo de texto
+com instruções assembly e converte a código de máquina. \emph{Compiladores}
+\index{compiladores} são programas que fazem conversão similar de linguagens
+de programação de alto nível. Um montador é muito mais simples que um
+compilador. \MarginNote{}
 
 An \emph{assembler} \index{assembler} is a program that reads a text
 file with assembly instructions and converts the assembly into machine
@@ -610,41 +618,45 @@ assembly language statement directly represents a single machine
 instruction. High-level language statements are \emph{much} more
 complex and may require many machine instructions.
 
-Another important difference between assembly and high-level languages is that
-since every different type of CPU has its own machine language, it also has
-its own assembly language. Porting assembly programs between different computer
-architectures is \emph{much} more difficult than in a high-level language.
+Outra importante diferença entre assembly e linguagens de alto nível é que
+cada tipo diferente de CPU tem sua própria linguagem de máquina, e também
+tem sua própria linguagem de montagem (assembly). Portar programas assembly
+entre diferentes arquiteturas de computadores é \emph{muito} mais difícil que
+uma linguagem de alto nível.
 
-This book's examples uses the Netwide Assembler or NASM \index{NASM}
-for short. It is freely available off the Internet (see the preface
-for the URL). More common assemblers are Microsoft's Assembler (MASM)
-\index{MASM} or Borland's Assembler (TASM). \index{TASM} There are
-some differences in the assembly syntax for MASM/TASM and NASM.
+Os exemplos desse livro utilizam o /Netwide Assembler/ ou, abreviando: NASM
+\index{NASM}. É um programa livre, disponibilizado na Internet (veja o prefácio
+para a encontrar a URL). Os outros montadores mais comuns são o montador da
+Microsoft (MASM) \index{MASM} ou o montador da Borland (TASM). \index{TASM} Há
+algumas diferenças na sintaxe do assembly para o MASM/TASM e o NASM.
 
-\subsection{Operadores de instru\c{c}\~ao}
+\subsection{Operadores de instrução}
 
-Machine code instructions have varying number and type of operands; however,
-in general, each instruction itself will have a fixed number of operands (0
-to 3). Operands can have the following types:
+Instruções de código de máquina variam em número e tipo de operandos; entretanto,
+em geral, cada instrução terá um fixo número de operandos (0 a 3). Operandos
+podem ter os seguintes tipos:
+
 \begin{description}
 \item[register:]
-These operands refer directly to the contents of the CPU's registers.
+  Esses operandos se referem diretamente ao conteúdo dos registradores da CPU.
 \item[memory:]
-These refer to data in memory. The address of the data may be a constant
-hardcoded into the instruction or may be computed using values of registers.
-Address are always offsets from the beginning of a segment.
+  Esses se referem aos dados em memória. O endereço dos dados podem ser
+  constantes programadas diretamente no código da instrução ou computadas
+  usando valores dos registradores.
+  Endereços são sempre deslocamentos do início de um segmento.
 \item[immediate:]
-\index{immediate}
-These are fixed values that are listed in the instruction itself. They are
-stored in the instruction itself (in the code segment), not in the data
-segment.
-\item[implied:]
-These operands are not explicitly shown. For example, the increment 
-instruction adds one to a register or memory. The one is implied.
+  \index{immediate}
+  Esses são valores fixos que são listados na própria instrução. Eles são
+  armazenados na própria instrução (no segmento de código), não no segmento
+  de dados.
+\item[implied]
+  Esses operandos não são explicitamente mostrados. Por exemplo, a instrução
+  de incremento adiciona um ao reistrador ou à memória. O valor de incremento
+  é implicado.
 \end{description}
 \index{assembly language|)}
 
-\subsection{Instru\c{c}\~oes b\'asicas}
+\subsection{Instruções básicas}
 
 The most basic instruction is the {\code MOV} \index{MOV} instruction. It moves
 data from one location to another (like the assignment operator in a
@@ -660,14 +672,14 @@ value of AX can not be stored into BL.
 
 Here is an example (semicolons start a comment\index{comment}):
 \begin{AsmCodeListing}[frame=none, numbers=none]
-      mov    eax, 3   ; store 3 into EAX register (3 is immediate operand) 
-      mov    bx, ax   ; store the value of AX into the BX register 
+      mov    eax, 3   ; store 3 into EAX register (3 is immediate operand)
+      mov    bx, ax   ; store the value of AX into the BX register
 \end{AsmCodeListing}
 
 The {\code ADD} \index{ADD} instruction is used to add integers.
 \begin{AsmCodeListing}[frame=none, numbers=none]
       add    eax, 4   ; eax = eax + 4
-      add    al, ah   ; al = al + ah 
+      add    al, ah   ; al = al + ah
 \end{AsmCodeListing}
 
 The {\code SUB} \index{SUB} instruction subtracts integers.
@@ -700,7 +712,7 @@ uses of directives are:
 \end{list}
 
 NASM code passes through a preprocessor just like C. It has many of the
-same preprocessor commands as C. However, NASM's preprocessor directives 
+same preprocessor commands as C. However, NASM's preprocessor directives
 start with a \% instead of a \# as in C.
 
 \subsubsection{A diretiva equ\index{diretiva!equ}}
@@ -739,7 +751,7 @@ quad word & Q \\
 ten bytes & T \\
 \hline
 \end{tabular}
-\caption{Letters for {\code RESX} and {\code DX} Directives 
+\caption{Letters for {\code RESX} and {\code DX} Directives
          \label{tab:size-letters} }
 \end{table}
 
@@ -803,7 +815,7 @@ interpreted as the address (or offset) of the data. If the label is
 placed inside square brackets ({\code []}), it is interpreted as the data at
 the address. In other words, one should think of a label as a \emph{pointer}
 to the data and the square brackets dereferences the pointer just as
-the asterisk does in C. (MASM/TASM follow a different convention.) 
+the asterisk does in C. (MASM/TASM follow a different convention.)
 In 32-bit mode, addresses are 32-bit. Here are some examples:
 \begin{AsmCodeListing}[frame=none]
       mov    al, [L1]      ; copy byte at L1 into AL
@@ -837,7 +849,7 @@ or double word. To fix this, add a size specifier:
 area of memory. The floating point coprocessor uses this data type.}\index{TWORD}.
 \index{label|)}
 
-\subsection{Entrada e Sa\'ida' \index{I/O|(}}
+\subsection{Entrada e Saída \index{I/O|(}}
 
 Input and output are very system dependent activities. It involves
 interfacing with the system's hardware. High level languages, like C,
@@ -847,7 +859,7 @@ libraries. They must either directly access hardware (which is a privileged
 operation in protected mode) or use whatever low level routines that the
 operating system provides.
 
-\index{I/O!asm\_io library|(} 
+\index{I/O!asm\_io library|(}
 It is very common for assembly routines to be interfaced with C. One
 advantage of this is that the assembly code can use the standard C
 library I/O routines.  However, one must know the rules for passing
@@ -872,7 +884,7 @@ http://pacman128.github.io/pcasm/}}:
 \begin{table}[t]
 \centering
 \begin{tabular}{lp{3.5in}}
-{\bf print\_int} & prints out to the screen the value of the integer stored 
+{\bf print\_int} & prints out to the screen the value of the integer stored
                   in EAX \\
 {\bf print\_char} & prints out to the screen the character whose
                     ASCII value stored in AL \\
@@ -886,7 +898,7 @@ http://pacman128.github.io/pcasm/}}:
                   ASCII code into the EAX register. \\
 \end{tabular}
 \caption{Assembly I/O Routines \label{tab:asmio} \index{I/O!asm\_io library!print\_int}
-\index{I/O!asm\_io library!print\_char} \index{I/O!asm\_io library!print\_string} 
+\index{I/O!asm\_io library!print\_char} \index{I/O!asm\_io library!print\_string}
 \index{I/O!asm\_io library!print\_nl} \index{I/O!asm\_io library!read\_int}
 \index{I/O!asm\_io library!read\_char}}
 \end{table}
@@ -898,9 +910,9 @@ to another section of code, but returns back to its origin after the routine
 is over. The example program below shows several examples of calls to these
 I/O routines.
 
-\subsection{Depura\c{c}\~ao\index{depura\c{c}\~ao|(}}
+\subsection{Depuração\index{depuração|(}}
 
-The author's library also contains some useful routines for debugging 
+The author's library also contains some useful routines for debugging
 programs. These debugging routines display information about the state of
 the computer without modifying the state. These routines are really
 \emph{macros} that preserve the current state of the CPU and then make a
@@ -915,7 +927,7 @@ respectively.
 \begin{description}
 
 \item[dump\_regs]
-\index{I/O!asm\_io library!dump\_regs} 
+\index{I/O!asm\_io library!dump\_regs}
 This macro prints out the values of the registers (in hexadecimal) of
 the computer to {\code stdout} (\emph{i.e.} the screen). It also
 displays the bits set in the FLAGS\footnote{Chapter~2 discusses this
@@ -925,7 +937,7 @@ argument that is printed out as well. This can be used to distinguish
 the output of different {\code dump\_regs} commands.
 
 \item[dump\_mem]
-\index{I/O!asm\_io library!dump\_mem} 
+\index{I/O!asm\_io library!dump\_mem}
 This macro prints out the values of a region of memory (in
 hexadecimal) and also as ASCII characters. It takes three comma delimited
 arguments. The first is an integer that is used to label the
@@ -936,7 +948,7 @@ memory displayed will start on the first paragraph boundary before the
 requested address.
 
 \item[dump\_stack]
-\index{I/O!asm\_io library!dump\_stack} 
+\index{I/O!asm\_io library!dump\_stack}
 This macro prints out the values on the CPU stack. (The stack will be
 covered in Chapter~4.) The stack is organized as double words and this
 routine displays them this way. It takes three comma delimited
@@ -947,20 +959,20 @@ third argument is the number of double words to display \emph{above}
 the address in {\code EBP}.
 
 \item[dump\_math]
-\index{I/O!asm\_io library!dump\_math} 
+\index{I/O!asm\_io library!dump\_math}
 This macro prints out the values of the registers of the math coprocessor.
 It takes a single integer argument that is used to label the output just as
 the argument of {\code dump\_regs} does.
 \end{description}
 \index{debugging|)}
-\index{I/O!asm\_io library|)} 
+\index{I/O!asm\_io library|)}
 \index{I/O|)}
 
 \section{Criando um programa}
 
 Today, it is unusual to create a stand alone program written
 completely in assembly language. Assembly is usually used to key certain
-critical routines. Why? It is \emph{much} easier to program in a higher level 
+critical routines. Why? It is \emph{much} easier to program in a higher level
 language than in assembly. Also, using assembly makes a program very hard to
 port to other platforms. In fact, it is rare to use assembly at all.
 
@@ -1070,7 +1082,7 @@ _asm_main:
 ;
         mov     eax, outmsg1
         call    print_string      ; print out first message
-        mov     eax, [input1]     
+        mov     eax, [input1]
         call    print_int         ; print out input1
         mov     eax, outmsg2
         call    print_string      ; print out second message
@@ -1084,7 +1096,7 @@ _asm_main:
 
         popa
         mov     eax, 0            ; return back to C
-        leave                     
+        leave
         ret
 \end{AsmCodeListing}
 
@@ -1123,7 +1135,7 @@ any module in the program. The {\code asm\_io} module declares the
 {\code print\_int}, {\em et.al.\/} labels to be global. This is why
 one can use them in the {\code first.asm} module.
 
-\subsection{Depend\^encias do compilador}
+\subsection{Dependências do compilador}
 
 The assembly code above is specific to the free GNU\footnote{GNU is a
 project of the Free Software Foundation ({\code
@@ -1174,7 +1186,7 @@ format allows segments to be defined just as for DJGPP and Linux. Use
 the {\code -f~win32} switch to output in this mode. The extension of
 the object file will be {\code obj}.
 
-\subsection{Montando o c\'odigo}
+\subsection{Montando o código}
 
 The first step is to assemble the code. From the command line, type:
 \begin{CodeQuote}
@@ -1185,7 +1197,7 @@ where {\em object-format} is either {\em coff\/}, {\em elf\/}, {\em obj} or
 source file must be changed for both Linux and Borland as well.)
 
 
-\subsection{Compilando o c\'odigo em C}
+\subsection{Compilando o código em C}
 
 Compile the {\code driver.c} file using a C compiler. For DJGPP, use:
 \begin{CodeQuote}
@@ -1209,7 +1221,7 @@ program using DJGPP, \index{compiler!DJGPP} use:
 gcc -o first driver.o first.o asm\_io.o
 \end{CodeQuote}
 This creates an executable called {\code first.exe} (or just {\code first}
-under Linux). 
+under Linux).
 
 With Borland, \index{compiler!Borland} one would use:
 \begin{CodeQuote}
@@ -1270,12 +1282,12 @@ temporary offset of 0 is used because {\code input1} is at the
 beginning of the part of the bss segment defined in this
 file. Remember this does \emph{not} mean that it will be at the
 beginning of the final bss segment of the program. When the code is linked,
-the linker will insert the correct offset into the position. Other 
+the linker will insert the correct offset into the position. Other
 instructions, like line~96, do not reference any labels. Here the assembler
 can compute the complete machine code.
 \index{listing file|)}
 
-\subsubsection{Representa\c{c}\~oes Big e Little Endian \index{endianess|(}}
+\subsubsection{Representações Big e Little Endian \index{endianess|(}}
 If one looks closely at line~95, something seems very strange about
 the offset in the square brackets of the machine code. The {\code
 input2} label is at offset 4 (as defined in this file); however, the
@@ -1304,7 +1316,7 @@ circumstances where it is important.
 Endianness does not apply to the order of array elements. The first
 element of an array is always at the lowest address. This applies to
 strings (which are just character arrays). Endianness still
-applies to the individual elements of the arrays. 
+applies to the individual elements of the arrays.
 \index{endianess|)}
 
 \begin{figure}[t]
@@ -1333,7 +1345,7 @@ _asm_main:
 
         popa
         mov     eax, 0            ; return back to C
-        leave                     
+        leave
         ret
 \end{AsmCodeListing}
 \caption{Skeleton Program \label{fig:skel}}
@@ -1343,10 +1355,3 @@ _asm_main:
 
 Figure~\ref{fig:skel} shows a skeleton file that can be used as a starting
 point for writing assembly programs.
-
-
-
-
-
-
-

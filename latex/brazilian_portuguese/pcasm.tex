@@ -16,7 +16,7 @@
 \ifx\pdfoutput\undefined
     \pdffalse          % we are not running PDFLaTeX
 \else
-%    \pdfoutput=1       % we are running PDFLaTeX
+%    \pdfoutput=1      % we are running PDFLaTeX
 %    \pdftrue
 \fi
 %----------------------------------------------------------------------
@@ -37,6 +37,7 @@
 \usepackage[brazilian]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+
 \ifmypdf
 \usepackage[pdftex,
             bookmarks=true,
@@ -109,4 +110,3 @@ em suas aulas; contudo, o autor gostaria de ser notificado nesses casos.\\
 \addcontentsline{toc}{chapter}{Index}
 \printindex
 \end{document}
-
